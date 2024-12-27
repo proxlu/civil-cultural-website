@@ -1,0 +1,19 @@
+.float_label {
+    font-size: .94em;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+
+    &.light {
+        color: var(--gray-600);
+    }
+
+    &.dark {
+        color: var(--gray-200);
+    }
+
+    & > label {
+        bottom: -.8rem;
+        padding-left: .5rem !important;
+        padding-right: .5rem !important;
+    }
+}

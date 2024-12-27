@@ -1,0 +1,20 @@
+.button {
+    background: var(--green-dark);
+    border: 1px solid #00B012;
+    color: var(--white);
+    font-weight: 600;
+    padding: .6rem;
+
+    &:hover, &:focus, &:focus-visible {
+        background-color: var(--green-dark) !important;
+        border: 1px solid #00B012 !important;
+        box-shadow: none !important;
+    }
+
+    &:active {
+        background-color: var(--green-dark) !important;
+        border: 1px solid #00B012 !important;
+        box-shadow: none !important;
+        filter: opacity(90%);
+    }
+}

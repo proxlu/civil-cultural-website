@@ -1,0 +1,140 @@
+/* Variable colors */
+:root {
+  --body-color: #e4e9f7;
+  --sidebar-color: #fff;
+  --primary-color: #695cfe;
+  --primary-color-light: #f6f5ff;
+  --toggle-color: #ddd;
+  --text-color: #707070;
+
+  /* ====== Transition ====== */
+  --tran-03: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.3s ease;
+  --tran-05: all 0.3s ease;
+
+  --light: #f5f5f5;
+  --dark: #2a2a2e;
+
+  --white: #ffffff;
+  --white-ice: #f5f5f5;
+  --gray-50: #e9e9e9;
+  --gray-100: #e8e8e8;
+  --gray-200: #dadada;
+  --gray-300: #565656;
+  --gray-400: #808080;
+  --gray-600: #333333;
+  --gray-700: #2a2a2e;
+  --tons-primary: rgba(50, 50, 50, 0.3);
+
+  --blue-100: #a0c8ff;
+  --blue-200: #8dbdff;
+  --blue-300: #729bd3;
+  --blue-400: #4681d3;
+  --blue-500: #3478d4;
+  --blue-600: #206dd5;
+
+  --green-300: #87ffbc;
+  --green-400: #5dffa5;
+  --green-500: #04d361;
+  --green-600: #00cf5d;
+  --green-800: #00b04f;
+  --green-dark: #00b024;
+
+  --purple-300: #9f75ff;
+  --purple-400: #9164fa;
+  --purple-500: #8257e5;
+  --purple-600: #6f48c9;
+
+  --red-50: #ff8877;
+  --red-100: #ff5c45;
+  --red-300: #ff5037;
+  --red-400: #ff472d;
+  --red-500: #ff3a1e;
+  --red-600: #f72c10;
+
+  --yellow-300: #fff460;
+  --yellow-400: #fff23f;
+  --yellow-500: #fff028;
+  --yellow-600: #f9e910;
+}
+
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+input,
+textArea,
+button,
+p {
+  font: 500 1rem "Fira Sans", sans-serif;
+}
+
+/* Inputs */
+
+input:focus,
+button:focus,
+textArea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Buttons */
+
+button,
+a {
+  cursor: pointer;
+}
+
+input[type="button"]:hover,
+button:hover {
+  background-image: linear-gradient(#00000000, #00000010 40%, #00000026);
+}
+
+.remove-focus:focus,
+.remove-focus:focus-visible,
+.remove-ficus:active,
+.remove-focus:active + .remove-bg-image:focus,
+.remove-focus:active + .remove-bg-image:hover {
+  outline: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Height and width */
+.h-full {
+  height: 100vh;
+}
+
+.w-full {
+  width: 100vw;
+}
+
+/* Text */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+title {
+  font: 600 1.2rem "Dongle", sans-serif;
+}
+
+.text-error {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--red-300) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.remove-bg-image:hover {
+  background-image: none;
+}

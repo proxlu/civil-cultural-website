@@ -1,0 +1,53 @@
+.container_login {
+    &.light {
+        background-color: var(--light);
+    }
+
+    &.dark {
+        background-color: var(--dark);
+    }
+}
+
+.logo_title {
+    font-size: 2.2em;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    line-height: .7em;
+    margin-right: 0.9rem;
+    margin-bottom: 0;
+
+    &.light {
+        color: var(--gray-500);
+    }
+
+    &.dark {
+        color: var(--gray-50);
+    }
+}
+
+.img_illustration {
+    background-image: radial-gradient(#0db958 36%, #234d4c);
+}
+
+.float_label {
+    font-size: 0.94em;
+
+    &.light {
+        color: var(--gray-600);
+    }
+
+    &.dark {
+        color: var(--gray-200);
+    }
+
+    & > label {
+        bottom: -0.8rem;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+}
+
+.form_link {
+    font-size: 0.86em;
+    font-weight: 500;
+}

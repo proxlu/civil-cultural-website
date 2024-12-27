@@ -1,0 +1,63 @@
+{
+  "portuguese": "Portuguese",
+  "english": "English",
+  "spanish": "Spanish",
+  "arabic": "Arabic",
+  "french": "French",
+  "error": {
+    "error": "Error"
+  },
+  "forms": {
+    "password": "Password",
+    "name": "Name",
+    "password_confirmation": "Confirm an password",
+    "phone_cell": "Phone Cell",
+    "landline": "Landline",
+    "personal_identification": "Personal Identification",
+    "country": "country",
+    "state": "State",
+    "city": "City",
+    "address": "Address",
+    "number": "Number",
+    "message_error": {
+      "required": "Required :FIELD field",
+      "email": "Invalid email",
+      "password_confirmation": "Divergent passwords",
+      "number": "Please enter only numbers",
+      "max": "Maximum :NUM Characters",
+      "type": "Please enter only letters"
+    }
+  },
+  "components": {
+    "sidebar": {
+      "close": "Close",
+      "topic": "Topic",
+      "article": "Article",
+      "news": "News"
+    }
+  },
+  "pages": {
+    "home": {
+      "popover_message": "This browser does not support speech recognition",
+      "menu_publication": "Latest publications",
+      "menu_category": "Publications by category"
+    },
+    "login": {
+      "nick_or_email": "Nick or E-mail",
+      "forgot_password": "Forgot password ?",
+      "create_account": "Create an account"
+    },
+    "register": {
+      "title": "Register",
+      "link_login": "Log in"
+    },
+    "forgot_password": {
+      "title": "Forgot password",
+      "message_info": "You will receive a link to change your password by email"
+    },
+    "reset_password": {
+      "title": "Redefine password",
+      "message_info": "Choose a new password to be reset"
+    }
+  }
+}

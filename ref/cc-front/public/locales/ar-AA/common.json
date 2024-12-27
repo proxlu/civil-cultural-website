@@ -1,0 +1,63 @@
+{
+  "portuguese": "البرتغالية",
+  "english": "إنجليزي",
+  "spanish": "الأسبانية",
+  "arabic": "العربية",
+  "french": "فرنسي",
+  "error": {
+    "error": "خطأ"
+  },
+  "forms": {
+    "password": "شعار",
+    "name": "اسم",
+    "password_confirmation": "تأكيد كلمة مرور",
+    "phone_cell": "الهاتف الخليوي",
+    "landline": "الهاتف الثابت",
+    "personal_identification": "التعريف الشخصي",
+    "country": "بلد",
+    "state": "حالة",
+    "city": "مدينة",
+    "address": "عنوان",
+    "number": "رقم",
+    "message_error": {
+      "required": "الحقل المطلوب",
+      "email": "بريد إلكتروني غير صالح",
+      "password_confirmation": "كلمات مرور متباينة",
+      "number": "الرجاء إدخال الأرقام فقط",
+      "max": "الحد الأقصى لعدد الكاراكتتار",
+      "type": "الرجاء إدخال الرسائل فقط"
+    }
+  },
+  "components": {
+    "sidebar": {
+      "close": "غلق",
+      "topic": "موضوع",
+      "article": "مقالة",
+      "news": "خبر"
+    }
+  },
+  "pages": {
+    "home": {
+      "popover_message": "هذا المستعرض لا يدعم التعرف على الكلام",
+      "menu_publication": "أحدث المنشورات",
+      "menu_category": "المنشورات حسب الفئة"
+    },
+    "login": {
+      "nick_or_email": "أو البريد الإلكتروني",
+      "forgot_password": "نسيت كلمة المرور ?",
+      "create_account": "إنشاء حساب"
+    },
+    "register": {
+      "title": "سجل",
+      "link_login": "تسجيل الدخول"
+    },
+    "forgot_password": {
+      "title": "هل نسيت كلمة السر",
+      "message_info": "سوف تتلقى رابطًا لتغيير كلمة المرور الخاصة بك عن طريق البريد الإلكتروني"
+    },
+    "reset_password": {
+      "title": "أعد تعريف كلمة المرور",
+      "message_info": "اختر كلمة مرور جديدة لإعادة تعيينها"
+    }
+  }
+}

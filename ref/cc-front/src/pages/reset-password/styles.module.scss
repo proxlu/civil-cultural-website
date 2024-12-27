@@ -1,0 +1,58 @@
+.body {
+  padding: 0 !important;
+  height: 100vh;
+
+  &.light {
+    background-color: var(--light);
+  }
+
+  &.dark {
+    background-color: var(--dark);
+  }
+}
+
+/* -------- IMAGEM DE CAPA ----------- */
+
+.img_container {
+  height: 100vh;
+  background: url("../../assets/locker.png") no-repeat top left fixed;
+  background-size: contain;
+}
+
+.instruction {
+  margin-top: 0.6rem;
+  font-size: 14px;
+
+  &.light {
+    color: var(--gray-500);
+  }
+
+  &.dark {
+    color: var(--gray-50);
+  }
+}
+
+.logo_title {
+  font-size: 2.2em;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  line-height: 0.7em;
+  margin-right: 0.9rem;
+  margin-bottom: 0;
+
+  &.light {
+    color: var(--gray-500);
+  }
+
+  &.dark {
+    color: var(--gray-50);
+  }
+}
+
+.eye_btn_container {
+  position: absolute;
+  top: 1.5em;
+  right: 1px;
+
+  z-index: 100;
+}

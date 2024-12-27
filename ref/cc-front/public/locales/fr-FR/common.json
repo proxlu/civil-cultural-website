@@ -1,0 +1,63 @@
+{
+  "portuguese": "Portuguese",
+  "english": "English",
+  "spanish": "Español",
+  "arabic": "Arabie",
+  "french": "French",
+  "error": {
+    "error": "Erreur"
+  },
+  "forms": {
+    "password": "Mot de passe",
+    "name": "Nom",
+    "password_confirmation": "Confirmer le mot de passe",
+    "phone_cell": "Téléphone portable",
+    "landline": "Ligne fixe",
+    "personal_identification": "Identification personnelle",
+    "country": "Pays",
+    "state": "État",
+    "city": "État",
+    "address": "Adresse",
+    "number": "Numéro",
+    "message_error": {
+      "required": "Champ requis",
+      "email": "Email invalide",
+      "password_confirmation": "Mots de passe divergents",
+      "number": "Veuillez n'entrer que des chiffres",
+      "max": "Nombre maximal de caractères",
+      "type": "Veuillez saisir uniquement des lettres"
+    }
+  },
+  "components": {
+    "sidebar": {
+      "close": "Fermer",
+      "topic": "Thème",
+      "article": "Article",
+      "news": "Des nouvelles"
+    }
+  },
+  "pages": {
+    "home": {
+      "popover_message": "Ce navigateur ne prend pas en charge la reconnaissance vocale",
+      "menu_publication": "Derniers articles",
+      "menu_category": "Articles par catégorie"
+    },
+    "login": {
+      "nick_or_email": "Pseudonyme ou email",
+      "forgot_password": "J'ai oublié mon mot de passe ?",
+      "create_account": "Créer un compte"
+    },
+    "register": {
+      "title": "Enregistrement",
+      "link_login": "Connexion"
+    },
+    "forgot_password": {
+      "title": "Mot de passe oublié",
+      "message_info": "Vous recevrez un lien pour changer votre mot de passe par email"
+    },
+    "reset_password": {
+      "title": "Redéfinir le mot de passe",
+      "message_info": "Choisissez un nouveau mot de passe à réinitialiser"
+    }
+  }
+}
