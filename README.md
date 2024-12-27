@@ -120,8 +120,6 @@ _This project is free for collaboration and anyone can modify it. We also have a
 - **Suporte de Tradução Multilíngue:**
   - Integração para Traduções Impulsionadas pela Comunidade ou Automáticas
 
----
-
 **Fluxo de Dados e Interações**
 
 - **Interação do Usuário:**
