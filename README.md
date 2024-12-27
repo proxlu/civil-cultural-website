@@ -43,9 +43,9 @@ _This could be the last major project in which humans, at least, have the majori
 ## Diagrama de desenvolvimento (Development diagram)
 
 ### Introdução / Introduction
-Esse projeto é livre para colaboração e qualquer um pode modificar. Temos um discord também caso tenha interesse em colaborar: 
+Esse projeto é livre para colaboração e qualquer um pode modificar. Temos um discord também caso tenha interesse em colaborar 
 
-_This project is free for collaboration and anyone can modify it. We also have a discord in case you are interested in collaborating:_
+_This project is free for collaboration and anyone can modify it. We also have a discord in case you are interested in collaborating_
 
 [![discord-logo-1-1](https://github.com/user-attachments/assets/faaa1bc3-e9f9-4003-93a1-088e2e247e8b)](https://discord.gg/DJXwEeZdM5)
 
