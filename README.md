@@ -19,7 +19,7 @@ Vai oferecer a informação em todas as línguas possíveis, para deficiência a
 Vai oferecer a grande parte do conhecimento sério popular atual (links de artigos e noticias) e um sistema único em infinitas conversas construtivas. Com memorial das melhores conversas.
 
 Este poderá ser o último grande projeto no qual os humanos têm, pelo menos, a maior parte do controle sobre a informação dada. Já que a inteligência artificial é cada vez mais dominante com o tempo.
-
+``
 _The objective of the Civil Cultural project is to largely eliminate this very negative situation._
 
 _Current major global social networks are all private. They are practically governed by the laws of the state of California and the country of the United States of America, as well as rules from other states upon request._
@@ -37,7 +37,7 @@ _It will offer information in all possible languages, for hearing, visual impair
 _It will offer most of the current serious popular knowledge (links to articles and news) and a unique system for constructive infinite conversations, with a memorial of the best conversations._
 
 _This could be the last major project in which humans, at least, have the majority control over the information provided, as artificial intelligence becomes increasingly dominant over time._
-
+``
 ## Diagrama de desenvolvimento (Development diagram)
 
 ### Introdução (Introduction)
