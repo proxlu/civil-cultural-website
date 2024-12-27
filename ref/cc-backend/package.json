@@ -1,0 +1,34 @@
+{
+  "name": "apicivilcultural",
+  "description": "Micro serviço api de civil cultural",
+  "version": "1.2.0",
+  "license": "GPL-2.0-only",
+  "homepage": "https://github.com/Civil-Cultural/apiCivilCultural",
+  "scripts": {
+    "build": "node ace build --production",
+    "start": "node server.js",
+    "dev": "node ace serve --watch"
+  },
+  "devDependencies": {
+    "@adonisjs/assembler": "5.3.1",
+    "adonis-preset-ts": "^2.1.0",
+    "pino-pretty": "5.0.2",
+    "typescript": "4.3.4",
+    "youch": "^2.2.1",
+    "youch-terminal": "^1.1.0"
+  },
+  "dependencies": {
+    "@adonisjs/auth": "8.0.6",
+    "@adonisjs/core": "^5.0.4-preview-rc-2.1",
+    "@adonisjs/lucid": "15.0.1",
+    "@adonisjs/redis": "7.0.6",
+    "@adonisjs/repl": "3.1.4",
+    "address": "^1.1.2",
+    "luxon": "^1.27.0",
+    "pg": "^8.6.0",
+    "phc-argon2": "^1.1.1",
+    "proxy-addr": "^2.0.6",
+    "reflect-metadata": "^0.1.13",
+    "source-map-support": "^0.5.19"
+  }
+}
