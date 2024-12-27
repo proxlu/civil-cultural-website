@@ -20,23 +20,23 @@ Vai oferecer a grande parte do conhecimento sério popular atual (links de artig
 
 Este poderá ser o último grande projeto no qual os humanos têm, pelo menos, a maior parte do controle sobre a informação dada. Já que a inteligência artificial é cada vez mais dominante com o tempo.
 
-_The objective of the Civil Cultural project is to largely eliminate this very negative situation.
+_The objective of the Civil Cultural project is to largely eliminate this very negative situation._
 
-Current major global social networks are all private. They are practically governed by the laws of the state of California and the country of the United States of America, as well as rules from other states upon request.
+_Current major global social networks are all private. They are practically governed by the laws of the state of California and the country of the United States of America, as well as rules from other states upon request._
 
-All of them are directed, in terms of the quality of most current cultural information, by amateurs in the subject matter and artificial intelligence.
+_All of them are directed, in terms of the quality of most current cultural information, by amateurs in the subject matter and artificial intelligence._
 
-None of them provides a system for large group conversations with content of guaranteed high quality.
+_None of them provides a system for large group conversations with content of guaranteed high quality._
 
-The goal, by offering a huge public-owned project, is to largely eliminate the existing gaps.
+_The goal, by offering a huge public-owned project, is to largely eliminate the existing gaps._
 
-It will comply with the official laws of the state that the portal represents, among hundreds of other portals with the same principle. Its management is controlled solely by professionals in each area, and the content is well managed in good quality, at least in the chat conversation part, where experts may also be included.
+_It will comply with the official laws of the state that the portal represents, among hundreds of other portals with the same principle. Its management is controlled solely by professionals in each area, and the content is well managed in good quality, at least in the chat conversation part, where experts may also be included._
 
-It will offer information in all possible languages, for hearing, visual impairments, and illiteracy. In addition, it will have a protected system for use by children (in principle, from the age of 8).
+_It will offer information in all possible languages, for hearing, visual impairments, and illiteracy. In addition, it will have a protected system for use by children (in principle, from the age of 8)._
 
-It will offer most of the current serious popular knowledge (links to articles and news) and a unique system for constructive infinite conversations, with a memorial of the best conversations.
+_It will offer most of the current serious popular knowledge (links to articles and news) and a unique system for constructive infinite conversations, with a memorial of the best conversations._
 
-This could be the last major project in which humans, at least, have the majority control over the information provided, as artificial intelligence becomes increasingly dominant over time._
+_This could be the last major project in which humans, at least, have the majority control over the information provided, as artificial intelligence becomes increasingly dominant over time._
 
 ## Diagrama de desenvolvimento (Development diagram)
 
