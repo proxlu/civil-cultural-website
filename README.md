@@ -42,7 +42,7 @@ _This could be the last major project in which humans, at least, have the majori
 
 ## Arquivos de referência / Reference files
 
-O diretório **ref** desse repositório contém alguns arquivos do antigo repositório para auxilio.
+O diretório **ref** desse repositório contém alguns arquivos do antigo repositório para referência.
 
 _The **ref** directory in this repository contains some files from the old repository for reference._
 
