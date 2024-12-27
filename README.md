@@ -100,6 +100,53 @@ _This project is free for collaboration and anyone can modify it. We also have a
 - **Medidas de Segurança e Compliance:**
   - Medidas de segurança estão integradas em toda a arquitetura para proteger os dados e garantir o compliance.
 
+### Lista de Páginas para o Site "Civil Cultural"
+
+#### Páginas Dirigidas ao Usuário:
+
+- **Home / Página Inicial**
+- **About Us / Sobre Nós**
+- **Contact Us / Contate-Nos**
+- **Login / Entrar**
+- **Register / Registrar**
+- **Profile / Perfil**
+- **Chat / Chat**
+- **Content (Articles, News) / Conteúdo (Artigos, Notícias)**
+- **Settings / Configurações**
+- **Help/Support / Ajuda e Suporte**
+- **Groups / Grupos**
+- **Notifications / Notificações**
+- **Preferences / Preferências**
+
+#### Criação e Gerenciamento de Conteúdo:
+
+- **Create Article / Criar Artigo**
+- **Submit News / Enviar Notícias**
+- **Content Moderation / Moderação de Conteúdo**
+
+#### Acessibilidade e Idioma:
+
+- **Language Selection / Seleção de Idioma**
+- **Accessibility Options / Opções de Acessibilidade**
+- **Community Translations / Traduções Comunitárias**
+- **Language Learning / Aprendizagem de Idiomas**
+
+#### Seções de Especialistas e Memoriais:
+
+- **Experts / Especialistas**
+- **Conversation Memorial / Memorial de Conversas**
+
+#### Administração e Gerenciamento:
+
+- **Admin Dashboard / Painel de Administração**
+- **User Dashboard / Painel do Usuário**
+
+#### Legal e Política:
+
+- **Legal / Legal**
+- **Terms of Service / Termos de Serviço**
+- **Privacy Policy / Política de Privacidade**
+
 ### 🇺🇸 English
 
 ### 1. Front-End Components:
@@ -169,3 +216,50 @@ _This project is free for collaboration and anyone can modify it. We also have a
   - Users engage in chats, which are moderated and archived by the back-end.
 - **Security and Compliance:**
   - Security measures are integrated throughout the architecture to protect data and ensure compliance.
+
+### Page list of website "Civil Cultural"
+
+#### Pages for users:
+
+- **Home / Página Inicial**
+- **About Us / Sobre Nós**
+- **Contact Us / Contate-Nos**
+- **Login / Entrar**
+- **Register / Registrar**
+- **Profile / Perfil**
+- **Chat / Chat**
+- **Content (Articles, News) / Conteúdo (Artigos, Notícias)**
+- **Settings / Configurações**
+- **Help/Support / Ajuda e Suporte**
+- **Groups / Grupos**
+- **Notifications / Notificações**
+- **Preferences / Preferências**
+
+#### Create and managing content:
+
+- **Create Article / Criar Artigo**
+- **Submit News / Enviar Notícias**
+- **Content Moderation / Moderação de Conteúdo**
+
+#### acess and language:
+
+- **Language Selection / Seleção de Idioma**
+- **Accessibility Options / Opções de Acessibilidade**
+- **Community Translations / Traduções Comunitárias**
+- **Language Learning / Aprendizagem de Idiomas**
+
+#### Especialists section and Memorials:
+
+- **Experts / Especialistas**
+- **Conversation Memorial / Memorial de Conversas**
+
+#### Administration e Managing:
+
+- **Admin Dashboard / Painel de Administração**
+- **User Dashboard / Painel do Usuário**
+
+#### Legal and Policy:
+
+- **Legal / Legal**
+- **Terms of Service / Termos de Serviço**
+- **Privacy Policy / Política de Privacidade**
