@@ -3,7 +3,7 @@ Site do projeto civil cultural, para todos colaborarem.
 
 _Website of the civil cultural project, for everyone to collaborate._
 
-# Diagrama de desenvolvimento (Development diagram)
+## Diagrama de desenvolvimento (Development diagram)
 
 ### Introdução (Introduction)
 Esse projeto é livre para colaboração e qualquer um pode modificar. Temos um discord também caso tenha interesse em colaborar: 
