@@ -1,9 +1,42 @@
 ![image](https://github.com/user-attachments/assets/f3132d9e-4f24-419f-867f-955c377cba45)
 
 # civil-cultural-website
-Site do projeto civil cultural, para todos colaborarem.
 
-_Website of the civil cultural project, for everyone to collaborate._
+O objetivo do projeto civil cultural é acabar com esta situação tão negativa, em grande medida.
+
+As grandes redes sociais mundiais atuais são todas privadas. São regidas praticamente sobre as leis do estado da Califórnia e do país dos Estados Unidos da América, alem de regras de n estados a pedido
+
+Todas elas são dirigidas, em qualidade na maior parte da informação cultural atual, por amadores nas matérias e inteligência artificial.
+
+Nenhuma dá um sistema de conversas em grandes grupos, com boa qualidade garantida no seu conteúdo.
+
+O objetivo, ao oferecer um enorme projeto de propriedade pública, é acabar, em grande parte, com os vazios existentes.
+
+Cumprirá as leis próprias oficiais do estado que o portal represente, entre centenas de outros portais com o mesmo princípio. Tem a gestão controlada somente por profissionais de cada área, e com o conteúdo bem gerido em boa qualidade pelo menos, na parte das conversas do chat, poderá incluir peritos também.
+
+Vai oferecer a informação em todas as línguas possíveis, para deficiência auditiva, visual e analfabetos. Alem de um sistema protegido para ser usado por crianças (em principio desde os 8 anos). 
+
+Vai oferecer a grande parte do conhecimento sério popular atual (links de artigos e noticias) e um sistema único em infinitas conversas construtivas. Com memorial das melhores conversas.
+
+Este poderá ser o último grande projeto no qual os humanos têm, pelo menos, a maior parte do controle sobre a informação dada. Já que a inteligência artificial é cada vez mais dominante com o tempo.
+
+_The objective of the Civil Cultural project is to largely eliminate this very negative situation.
+
+Current major global social networks are all private. They are practically governed by the laws of the state of California and the country of the United States of America, as well as rules from other states upon request.
+
+All of them are directed, in terms of the quality of most current cultural information, by amateurs in the subject matter and artificial intelligence.
+
+None of them provides a system for large group conversations with content of guaranteed high quality.
+
+The goal, by offering a huge public-owned project, is to largely eliminate the existing gaps.
+
+It will comply with the official laws of the state that the portal represents, among hundreds of other portals with the same principle. Its management is controlled solely by professionals in each area, and the content is well managed in good quality, at least in the chat conversation part, where experts may also be included.
+
+It will offer information in all possible languages, for hearing, visual impairments, and illiteracy. In addition, it will have a protected system for use by children (in principle, from the age of 8).
+
+It will offer most of the current serious popular knowledge (links to articles and news) and a unique system for constructive infinite conversations, with a memorial of the best conversations.
+
+This could be the last major project in which humans, at least, have the majority control over the information provided, as artificial intelligence becomes increasingly dominant over time._
 
 ## Diagrama de desenvolvimento (Development diagram)
 
