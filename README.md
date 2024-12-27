@@ -50,8 +50,8 @@ _This project is free for collaboration and anyone can modify it. We also have a
 [![discord-logo-1-1](https://github.com/user-attachments/assets/faaa1bc3-e9f9-4003-93a1-088e2e247e8b)](https://discord.gg/DJXwEeZdM5)
 
 ## Índice / Index
-1. #🇧🇷 Português
-2. #🇺🇸 English
+1. [Português](###-🇧🇷-Português)
+2. [English](###-🇺🇸-English)
 
 ### 🇧🇷 Português
 
