@@ -40,6 +40,12 @@ _It will offer most of the current serious popular knowledge (links to articles 
 
 _This could be the last major project in which humans, at least, have the majority control over the information provided, as artificial intelligence becomes increasingly dominant over time._
 
+## Arquivos de referência / Reference files
+
+O diretório **ref** desse repositório contém alguns arquivos do antigo repositório para auxilio.
+
+_The **ref** directory in this repository contains some files from the old repository for reference._
+
 ## Diagrama de desenvolvimento (Development diagram)
 
 ### Introdução / Introduction
