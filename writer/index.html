@@ -168,94 +168,80 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Logo</div>
-        <div class="header-buttons">
-            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-            <button id="language-toggle">PT/EN</button>
-            <button class="discord-btn" onclick="window.open('https://discord.gg/DJXwEeZdM5', '_blank')">
-                <i class="fab fa-discord"></i>
-            </button>
-            <button id="write-news" onclick="window.open('http://civilcultural.free.nf/', '_self')">Ler Notícia</button>
-        </div>
-    </header>
-
-    <!-- Corpo da página -->
-    <div class="container">
-        <div class="form-container">
-            <h2>Formulário de Notícia</h2>
-            <form id="news-form">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="token">Token/Chave:</label>
-                <input type="text" id="token" name="token" required>
-
-                <label for="bio">Apresentação Profissional:</label>
-                <textarea id="bio" name="bio" required></textarea>
-
-                <label for="title">Título da Notícia:</label>
-                <input type="text" id="title" name="title" required>
-
-                <label for="content">Conteúdo:</label>
-                <textarea id="content" name="content" required></textarea>
-
-                <label for="image">Enviar Imagem (opcional):</label>
-                <input type="file" id="image" name="image" accept="image/*">
-
-                <button type="submit">Enviar Notícia</button>
-            </form>
-        </div>
+<!-- Header -->
+<header>
+    <div class="logo" data-translate="true">Logo</div>
+    <div class="header-buttons">
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        <button id="language-toggle">PT/EN</button>
+        <button class="discord-btn" onclick="window.open('https://discord.gg/DJXwEeZdM5', '_blank')">
+            <i class="fab fa-discord"></i>
+        </button>
+        <button id="write-news" onclick="window.open('http://civilcultural.free.nf/', '_self')">Ler Notícia</button>
     </div>
+</header>
 
-    <!-- Botão flutuante -->
-    <button class="floating-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+<!-- Corpo da página -->
+<div class="container">
+    <div class="form-container">
+        <h2 data-translate="true">Formulário de Notícia</h2>
+        <form id="news-form">
+            <label for="name" data-translate="true">Nome:</label>
+            <input type="text" id="name" name="name" required>
 
-    <script>
-        // Alternar tema
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+            <label for="token" data-translate="true">Token/Chave:</label>
+            <input type="text" id="token" name="token" required>
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            const icon = themeToggle.querySelector('i');
-            if (body.classList.contains('dark-theme')) {
-                icon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                icon.classList.replace('fa-sun', 'fa-moon');
-            }
-        });
+            <label for="bio" data-translate="true">Apresentação Profissional:</label>
+            <textarea id="bio" name="bio" required></textarea>
 
-        // Alternar idioma (exemplo simples)
-        const languageToggle = document.getElementById('language-toggle');
-        languageToggle.addEventListener('click', () => {
-            const currentLang = document.documentElement.lang;
-            if (currentLang === 'pt-BR') {
-                document.documentElement.lang = 'en';
-                languageToggle.textContent = 'EN/PT';
-                // Aqui você pode adicionar lógica para traduzir o conteúdo da página
-            } else {
-                document.documentElement.lang = 'pt-BR';
-                languageToggle.textContent = 'PT/EN';
-                // Aqui você pode adicionar lógica para traduzir o conteúdo da página
-            }
-        });
+            <label for="title" data-translate="true">Título da Notícia:</label>
+            <input type="text" id="title" name="title" required>
 
-        // Botão "Escrever Notícia" (redirecionar futuramente)
-        const writeNewsBtn = document.getElementById('1write-news');
-        writeNewsBtn.addEventListener('click', () => {
-            alert('Redirecionando para a página de escrever notícia...');
-            // window.location.href = 'escrever-noticia.html'; // Adicione o link futuro aqui
-        });
+            <label for="content" data-translate="true">Conteúdo:</label>
+            <textarea id="content" name="content" required></textarea>
 
-        // Enviar formulário
-        const newsForm = document.getElementById('news-form');
-        newsForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Notícia enviada com sucesso!');
-            // Aqui você pode adicionar lógica para enviar os dados do formulário
-        });
-    </script>
+            <label for="image" data-translate="true">Enviar Imagem (opcional):</label>
+            <input type="file" id="image" name="image" accept="image/*">
+
+            <button type="submit" data-translate="true">Enviar Notícia</button>
+        </form>
+    </div>
+</div>
+
+<!-- Botão flutuante -->
+<button class="floating-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+
+<script>
+    // Alternar tema
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        const icon = themeToggle.querySelector('i');
+        if (body.classList.contains('dark-theme')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+        }
+    });
+
+    // Botão "Escrever Notícia" (redirecionar futuramente)
+    const writeNewsBtn = document.getElementById('1write-news');
+    writeNewsBtn.addEventListener('click', () => {
+        alert('Redirecionando para a página de escrever notícia...');
+        // window.location.href = 'escrever-noticia.html'; // Adicione o link futuro aqui
+    });
+
+    // Enviar formulário
+    const newsForm = document.getElementById('news-form');
+    newsForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Notícia enviada com sucesso!');
+        // Aqui você pode adicionar lógica para enviar os dados do formulário
+    });
+</script>
+<script src="/traduzir.js"></script>
 </body>
 </html>

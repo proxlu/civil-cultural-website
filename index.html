@@ -119,79 +119,68 @@
 
         .news h2 {
             margin-top: 0;
+            font-weight: bold;
+            font-size: 24px; /* Adjust the size as needed */
         }
 
         .news p {
             line-height: 1.6;
+            font-size: 16px; /* Adjust the size as needed */
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo">Logo</div>
-        <div class="header-buttons">
-            <button id="theme-toggle"><i class="fas fa-moon"></i></button>
-            <button id="language-toggle">PT/EN</button>
-            <button class="discord-btn" onclick="window.open('https://discord.gg/DJXwEeZdM5', '_blank')">
-                <i class="fab fa-discord"></i>
-            </button>
-            <button id="write-news" onclick="window.open('http://civilcultural.free.nf/writer', '_self')">Escrever Notícia</button>
-        </div>
-    </header>
-
-    <!-- Corpo da página -->
-    <div class="container">
-        <div class="news">
-            <h2>Notícia de Exemplo</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo nec nisi tincidunt tincidunt.
-                Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Donec nec libero
-                nec nisi fermentum fermentum. Integer nec turpis eget elit tincidunt tincidunt. Sed euismod, nisl nec
-                tincidunt luctus, nunc nisl aliquam nunc, nec tincidunt nunc nisl nec nunc.
-            </p>
-        </div>
+<!-- Header -->
+<header>
+    <div class="logo" data-translate="true">Logo</div>
+    <div class="header-buttons">
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        <button id="language-toggle">PT/EN</button>
+        <button class="discord-btn" onclick="window.open('https://discord.gg/DJXwEeZdM5', '_blank')">
+            <i class="fab fa-discord"></i>
+        </button>
+        <button id="write-news" onclick="window.open('http://civilcultural.free.nf/writer', '_self')">Escrever Notícia</button>
     </div>
+</header>
 
-    <!-- Botão flutuante -->
-    <button class="floating-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+<!-- Corpo da página -->
+<div class="container">
+    <div class="news">
+        <h2 data-translate="true">Notícia de Exemplo</h2>
+        <p data-translate="true">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo nec nisi tincidunt tincidunt.
+            Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Donec nec libero
+            nec nisi fermentum fermentum. Integer nec turpis eget elit tincidunt tincidunt. Sed euismod, nisl nec
+            tincidunt luctus, nunc nisl aliquam nunc, nec tincidunt nunc nisl nec nunc.
+        </p>
+    </div>
+</div>
 
-    <script>
-        // Alternar tema
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
+<!-- Botão flutuante -->
+<button class="floating-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            const icon = themeToggle.querySelector('i');
-            if (body.classList.contains('dark-theme')) {
-                icon.classList.replace('fa-moon', 'fa-sun');
-            } else {
-                icon.classList.replace('fa-sun', 'fa-moon');
-            }
-        });
+<script>
+    // Alternar tema
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-        // Alternar idioma (exemplo simples)
-        const languageToggle = document.getElementById('language-toggle');
-        languageToggle.addEventListener('click', () => {
-            const currentLang = document.documentElement.lang;
-            if (currentLang === 'pt-BR') {
-                document.documentElement.lang = 'en';
-                languageToggle.textContent = 'EN/PT';
-                // Aqui você pode adicionar lógica para traduzir o conteúdo da página
-            } else {
-                document.documentElement.lang = 'pt-BR';
-                languageToggle.textContent = 'PT/EN';
-                // Aqui você pode adicionar lógica para traduzir o conteúdo da página
-            }
-        });
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-theme');
+        const icon = themeToggle.querySelector('i');
+        if (body.classList.contains('dark-theme')) {
+            icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            icon.classList.replace('fa-sun', 'fa-moon');
+        }
+    });
 
-        // Botão "Escrever Notícia" (redirecionar futuramente)
-        const writeNewsBtn = document.getElementById('1write-news');
-        writeNewsBtn.addEventListener('click', () => {
-            alert('Redirecionando para a página de escrever notícia...');
-            // window.location.href = 'escrever-noticia.html'; // Adicione o link futuro aqui
-        });
-    </script>
+    // Botão "Escrever Notícia" (redirecionar futuramente)
+    const writeNewsBtn = document.getElementById('write-news');
+    writeNewsBtn.addEventListener('click', () => {
+        alert('Redirecionando para a página de escrever notícia...');
+        // window.location.href = 'escrever-noticia.html'; // Adicione o link futuro aqui
+    });
+</script>
+<script type="module" src="traduzir.js"></script>
 </body>
 </html>
