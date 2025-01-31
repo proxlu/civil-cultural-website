@@ -129,7 +129,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo">Logo</div>
+        <div class="logo" data-translate="true">Logo</div>
         <div class="header-buttons">
             <button id="theme-toggle"><i class="fas fa-moon"></i></button>
             <button id="language-toggle">PT/EN</button>
@@ -143,8 +143,8 @@
     <!-- Corpo da página -->
     <div class="container">
         <div class="news">
-            <h2>Notícia de Exemplo</h2>
-            <p>
+            <h2 data-translate="true">Notícia de Exemplo</h2>
+            <p data-translate="true">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo nec nisi tincidunt tincidunt.
                 Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Donec nec libero
                 nec nisi fermentum fermentum. Integer nec turpis eget elit tincidunt tincidunt. Sed euismod, nisl nec
@@ -168,21 +168,6 @@
                 icon.classList.replace('fa-moon', 'fa-sun');
             } else {
                 icon.classList.replace('fa-sun', 'fa-moon');
-            }
-        });
-
-        // Alternar idioma (exemplo simples)
-        const languageToggle = document.getElementById('language-toggle');
-        languageToggle.addEventListener('click', () => {
-            const currentLang = document.documentElement.lang;
-            if (currentLang === 'pt-BR') {
-                document.documentElement.lang = 'en';
-                languageToggle.textContent = 'EN/PT';
-                // Aqui você pode adicionar lógica para traduzir o conteúdo da página
-            } else {
-                document.documentElement.lang = 'pt-BR';
-                languageToggle.textContent = 'PT/EN';
-                // Aqui você pode adicionar lógica para traduzir o conteúdo da página
             }
         });
 
