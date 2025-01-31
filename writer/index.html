@@ -170,7 +170,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo" data-translate="true">Logo</div>
+        <div class="logo" data-translate>Logo</div>
         <div class="header-buttons">
             <button id="theme-toggle"><i class="fas fa-moon"></i></button>
             <button id="language-toggle">PT/EN</button>
@@ -183,28 +183,28 @@
 
     <!-- Corpo da página -->
     <div class="container">
-        <div class="form-container">
-            <h2 data-translate="true">Formulário de Notícia</h2>
+        <div class="form-container" data-translate>
+            <h2 >Formulário de Notícia</h2>
             <form id="news-form">
-                <label for="name" data-translate="true">Nome:</label>
+                <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required>
 
-                <label for="token" data-translate="true">Token/Chave:</label>
+                <label for="token">Token/Chave:</label>
                 <input type="text" id="token" name="token" required>
 
-                <label for="bio" data-translate="true">Apresentação Profissional:</label>
+                <label for="bio">Apresentação Profissional:</label>
                 <textarea id="bio" name="bio" required></textarea>
 
-                <label for="title" data-translate="true">Título da Notícia:</label>
+                <label for="title">Título da Notícia:</label>
                 <input type="text" id="title" name="title" required>
 
-                <label for="content" data-translate="true">Conteúdo:</label>
+                <label for="content">Conteúdo:</label>
                 <textarea id="content" name="content" required></textarea>
 
-                <label for="image" data-translate="true">Enviar Imagem (opcional):</label>
-                <input type="file" id="image" name="image" accept="image/*">
+                <label for="image">Enviar Imagem (opcional):</label>
+                <input type="file" id="image" name="image" accept="image/*" data-translate="true">
 
-                <button type="submit" data-translate="true">Enviar Notícia</button>
+                <button type="submit">Enviar Notícia</button>
             </form>
         </div>
     </div>
@@ -212,6 +212,7 @@
     <!-- Botão flutuante -->
     <button class="floating-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
+    <script src="../traduzir.js"></script>
     <script>
         // Alternar tema
         const themeToggle = document.getElementById('theme-toggle');
@@ -224,21 +225,6 @@
                 icon.classList.replace('fa-moon', 'fa-sun');
             } else {
                 icon.classList.replace('fa-sun', 'fa-moon');
-            }
-        });
-
-        // Alternar idioma (exemplo simples)
-        const languageToggle = document.getElementById('language-toggle');
-        languageToggle.addEventListener('click', () => {
-            const currentLang = document.documentElement.lang;
-            if (currentLang === 'pt-BR') {
-                document.documentElement.lang = 'en';
-                languageToggle.textContent = 'EN/PT';
-                // Aqui você pode adicionar lógica para traduzir o conteúdo da página
-            } else {
-                document.documentElement.lang = 'pt-BR';
-                languageToggle.textContent = 'PT/EN';
-                // Aqui você pode adicionar lógica para traduzir o conteúdo da página
             }
         });
 

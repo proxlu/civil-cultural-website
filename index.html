@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Notícias</title>
+    <title data-translate>Página de Notícias</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Estilos gerais */
@@ -129,7 +129,7 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="logo" data-translate="true">Logo</div>
+        <div class="logo" data-translate>Logo</div>
         <div class="header-buttons">
             <button id="theme-toggle"><i class="fas fa-moon"></i></button>
             <button id="language-toggle">PT/EN</button>
@@ -142,9 +142,9 @@
 
     <!-- Corpo da página -->
     <div class="container">
-        <div class="news">
-            <h2 data-translate="true">Notícia de Exemplo</h2>
-            <p data-translate="true">
+        <div class="news" data-translate>
+            <h2>Notícia de Exemplo</h2>
+            <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vel justo nec nisi tincidunt tincidunt.
                 Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Donec nec libero
                 nec nisi fermentum fermentum. Integer nec turpis eget elit tincidunt tincidunt. Sed euismod, nisl nec
@@ -156,6 +156,7 @@
     <!-- Botão flutuante -->
     <button class="floating-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
 
+    <script src="traduzir.js"></script>
     <script>
         // Alternar tema
         const themeToggle = document.getElementById('theme-toggle');
