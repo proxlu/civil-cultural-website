@@ -1,100 +1,119 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Função de tradução
+    // Função de tradução automática
     function translate(text, targetLang, callback) {
         const sourceLang = document.documentElement.lang === 'pt-BR' ? 'pt' : 'en';
         const url = `https://api.mymemory.translated.net/get?q=${encodeURIComponent(text)}&langpair=${sourceLang}|${targetLang}`;
+
         fetch(url)
             .then(response => response.json())
             .then(data => {
-                if (data.responseStatus === 200) {
-                    callback(data.responseData.translatedText);
-                } else {
-                    callback(`Error: ${data.responseDetails}`);
-                }
-            })
+            if (data.responseStatus === 200) {
+                callback(data.responseData.translatedText);
+            } else {
+                callback(`Erro: ${data.responseDetails}`);
+            }
+        })
             .catch(error => {
-                callback(`Error: ${error}`);
-            });
+            callback(`Erro: ${error}`);
+        });
     }
 
     // Função para traduzir um texto maior, dividindo-o em pedaços de até 500 caracteres
     async function translateTextInChunks(text, targetLang) {
-        const maxLength = 500; // Limite de caracteres para a API
+        const maxLength = 500; // Limite de caracteres da API
         const chunks = [];
 
-        // Dividir o texto em pedaços de até 500 caracteres
+        // Dividir o texto em partes de no máximo 500 caracteres
         for (let i = 0; i < text.length; i += maxLength) {
             chunks.push(text.slice(i, i + maxLength));
         }
 
-        // Traduzir cada pedaço separadamente e combinar os resultados
+        // Traduzir cada parte separadamente e combinar os resultados
         const translatedChunks = await Promise.all(chunks.map(chunk =>
-            new Promise((resolve, reject) => {
-                translate(chunk, targetLang, (result) => {
-                    if (result.startsWith('Error:')) {
-                        reject(result);
-                    } else {
-                        resolve(result);
-                    }
-                });
-            })
+        new Promise((resolve, reject) => {
+            translate(chunk, targetLang, (result) => {
+                if (result.startsWith('Erro:')) {
+                    reject(result);
+                } else {
+                    resolve(result);
+                }
+            });
+        })
         ));
 
-        // Combinar as partes traduzidas
         return translatedChunks.join('');
     }
 
-    // Função para traduzir os elementos HTML, mantendo a formatação
-    async function translateElement(element, targetLang, currentLang) {
-        // Verifica se o elemento tem o atributo data-no-translate, que vai impedir a tradução
-        if (element.hasAttribute('data-no-translate')) {
-            return; // Não traduz se o atributo estiver presente
+    // Função para traduzir os elementos HTML automaticamente
+    async function translateElement(element, targetLang) {
+        // Se o elemento tiver o atributo "traduzir-no", ele não será traduzido
+        if (element.hasAttribute('traduzir-no')) {
+            return;
         }
 
-        // Verifica o conteúdo original armazenado no atributo data-original-html
-        const originalHtml = element.getAttribute('data-original-html') || element.innerHTML || element.value || element.placeholder;
+        // Obtém o conteúdo original e o armazena se ainda não foi salvo
+        const originalText = element.getAttribute('data-original-text') || element.innerHTML || element.value || element.placeholder;
 
-        if (!element.getAttribute('data-original-html')) {
-            element.setAttribute('data-original-html', originalHtml); // Armazena o conteúdo HTML original
+        if (!element.getAttribute('data-original-text')) {
+            element.setAttribute('data-original-text', originalText);
         }
 
-        // Traduz o texto, mas preservando a estrutura HTML
         try {
-            const translatedText = await translateTextInChunks(originalHtml, targetLang);
+            const translatedText = await translateTextInChunks(originalText, targetLang);
 
-            // Atualiza o conteúdo do elemento com o texto traduzido, preservando a formatação HTML
-            element.innerHTML = translatedText;
+            if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                element.placeholder = translatedText; // Tradução para inputs e textareas
+            } else {
+                element.innerHTML = translatedText; // Tradução para textos normais
+            }
 
         } catch (error) {
             console.error(error);
-            if (element.innerHTML !== undefined) {
-                element.innerHTML = error;
-            }
+            element.innerHTML = error;
         }
+    }
+
+    // Função para mudar a linguagem do TinyMCE
+    function updateTinyMCELanguage(targetLang) {
+        const tinyLang = targetLang === 'pt-BR' ? 'pt_BR' : 'en';
+
+        tinymce.remove(); // Remove a instância atual para evitar conflitos
+        tinymce.init({
+            selector: '#content',
+            language: tinyLang,
+            plugins: 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table code help wordcount',
+            toolbar: 'undo redo | formatselect | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
+            height: 300
+        });
     }
 
     // Alternar idioma
     const languageToggle = document.getElementById('language-toggle');
     if (languageToggle) {
         languageToggle.addEventListener('click', async () => {
-            languageToggle.disabled = true; // Desabilita o botão durante a tradução
+            languageToggle.disabled = true;
             languageToggle.textContent = 'Traduzindo...';
 
             const currentLang = document.documentElement.lang;
-            const targetLang = currentLang === 'pt-BR' ? 'en' : 'pt';
-            const elementsToTranslate = document.querySelectorAll('[data-translate], input, textarea, select');
+            const targetLang = currentLang === 'pt-BR' ? 'en' : 'pt-BR';
 
-            // Traduzir todos os elementos
+            // Traduzir todos os elementos marcados com "traduzir"
+            const elementsToTranslate = document.querySelectorAll('[traduzir], input[traduzir], textarea[traduzir]');
             for (const element of elementsToTranslate) {
-                await translateElement(element, targetLang, currentLang);
+                await translateElement(element, targetLang);
             }
 
-            // Atualiza o idioma da página
-            document.documentElement.lang = targetLang === 'en' ? 'en' : 'pt-BR';
+            // Atualiza a linguagem da página e do TinyMCE
+            document.documentElement.lang = targetLang;
+            updateTinyMCELanguage(targetLang);
+
             languageToggle.textContent = targetLang === 'en' ? 'EN/PT' : 'PT/EN';
-            languageToggle.disabled = false; // Habilita o botão após a tradução
+            languageToggle.disabled = false;
         });
     } else {
         console.error('Elemento language-toggle não encontrado.');
     }
+
+    // Inicializa TinyMCE com a linguagem correta ao carregar a página
+    updateTinyMCELanguage(document.documentElement.lang);
 });

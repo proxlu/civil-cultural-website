@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title traduzir>Escrever Notícia</title>
+
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/xat7qy1gmhbnix6ap2w64u3x7mnvxngo7w67mroqp7swajvj/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+    <script src="https://cdn.tiny.cloud/1/xat7qy1gmhbnix6ap2w64u3x7mnvxngo7w67mroqp7swajvj/tinymce/7/langs/pt_BR.js" referrerpolicy="origin"></script>
+
+    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="../css/style_write.css">
+
+    <style>
+        /* Floating Labels */
+        .floating-label {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .floating-label input,
+        .floating-label textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: transparent;
+        }
+
+        /* Para que o :placeholder-shown funcione, usamos um placeholder com espaço */
+        .floating-label input::placeholder,
+        .floating-label textarea::placeholder {
+            color: transparent;
+        }
+
+        .floating-label label {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            transition: 0.2s ease all;
+            pointer-events: none;
+            color: #999;
+            background: transparent;
+            padding: 0 4px;
+        }
+
+        /* Quando o input está focado ou não está vazio */
+        .floating-label input:focus ~ label,
+        .floating-label input:not(:placeholder-shown) ~ label,
+        .floating-label textarea:focus ~ label,
+        .floating-label textarea:not(:placeholder-shown) ~ label {
+            top: -10px;
+            left: 10px;
+            font-size: 12px;
+            color: #007bff;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo" traduzir>Logo</div>
+    <div class="header-buttons">
+        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        <button id="language-toggle">PT/EN</button>
+        <button class="discord-btn" onclick="window.open('https://discord.gg/DJXwEeZdM5', '_blank')">
+            <i class="fab fa-discord"></i>
+        </button>
+        <button id="write-news" onclick="window.open('writer.html', '_self')" traduzir>Ver Notícia</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="form-container">
+        <h2 traduzir>Escrever Nova Notícia</h2>
+        <form id="newsForm">
+            <div class="floating-label">
+                <input type="text" id="name" name="name" placeholder=" " required>
+                <label for="name" traduzir>Nome</label>
+            </div>
+
+            <div class="floating-label">
+                <input type="text" id="token" name="token" placeholder=" " required>
+                <label for="token" traduzir>Token/Chave</label>
+            </div>
+
+            <div class="floating-label">
+                <textarea id="bio" name="bio" placeholder=" " required></textarea>
+                <label for="bio" traduzir>Apresentação Profissional</label>
+            </div>
+
+            <div class="floating-label">
+                <input type="text" id="title" name="title" placeholder=" " required>
+                <label for="title" traduzir>Título da Notícia</label>
+            </div>
+
+            <div class="floating-label">
+                <textarea id="content" placeholder=" "></textarea>
+                <label for="content" traduzir-no></label>
+            </div>
+
+            <div class="floating-label">
+                <input type="text" id="image" name="image" placeholder="http://exemplo.com/imagem.jpg">
+                <label for="image" traduzir>Imagem (URL, opcional)</label>
+            </div>
+
+            <button type="submit" traduzir>Salvar Notícia</button>
+        </form>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="/traduzir.js"></script>
+<script src="../config/config.js"></script>
+<script src="../includes/theme_toggle.js"></script>
+<script src="../includes/processa_noticias.js"></script>
+
+<script>
+    tinymce.init({
+        selector: '#content',
+        language: 'pt_BR',
+        plugins: 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table code help wordcount',
+        toolbar: 'undo redo | formatselect | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
+        height: 300
+    });
+</script>
+
+</body>
+</html>
