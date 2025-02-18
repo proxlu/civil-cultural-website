@@ -21,7 +21,6 @@
             position: relative;
             margin-bottom: 20px;
         }
-
         .floating-label input,
         .floating-label textarea {
             width: 100%;
@@ -31,13 +30,10 @@
             border-radius: 5px;
             background: transparent;
         }
-
-        /* Para que o :placeholder-shown funcione, usamos um placeholder com espaço */
         .floating-label input::placeholder,
         .floating-label textarea::placeholder {
             color: transparent;
         }
-
         .floating-label label {
             position: absolute;
             left: 12px;
@@ -48,8 +44,6 @@
             background: transparent;
             padding: 0 4px;
         }
-
-        /* Quando o input está focado ou não está vazio */
         .floating-label input:focus ~ label,
         .floating-label input:not(:placeholder-shown) ~ label,
         .floating-label textarea:focus ~ label,
@@ -61,6 +55,10 @@
             background: #fff;
         }
     </style>
+
+    <!-- Firebase Configuração -->
+    <!-- Importante: usamos módulos para carregar o Firebase -->
+    <script type="module" src="../config/firebase-config.js"></script>
 </head>
 <body>
 <header>
@@ -101,7 +99,7 @@
 
             <div class="floating-label">
                 <textarea id="content" placeholder=" "></textarea>
-                <label for="content" traduzir-no></label>
+                <label for="content" traduzir>No conteúdo, insira seu texto aqui</label>
             </div>
 
             <div class="floating-label">
@@ -116,9 +114,8 @@
 
 <!-- Scripts -->
 <script src="/traduzir.js"></script>
-<script src="../config/config.js"></script>
-<script src="../includes/theme_toggle.js"></script>
-<script src="../includes/processa_noticias.js"></script>
+<script src="../../theme_toggle.js"></script>
+<script type="module" src="../includes/processa_noticias.js"></script>
 
 <script>
     tinymce.init({
@@ -129,6 +126,5 @@
         height: 300
     });
 </script>
-
 </body>
 </html>

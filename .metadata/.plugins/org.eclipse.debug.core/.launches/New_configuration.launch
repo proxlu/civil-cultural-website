@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.php.debug.core.launching.webPageLaunch">
+    <booleanAttribute key="auto_generated_url" value="true"/>
+    <stringAttribute key="base_url" value=""/>
+    <stringAttribute key="file_name" value=""/>
+    <booleanAttribute key="org.eclipse.debug.core.ATTR_FORCE_SYSTEM_CONSOLE_ENCODING" value="false"/>
+    <booleanAttribute key="org.eclipse.php.debug.core.RunWithDebugInfo" value="true"/>
+</launchConfiguration>
