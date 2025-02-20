@@ -1,9 +1,8 @@
-// processa_noticias.js
-// Use módulos para importar a função de envio
+// includes/processa_noticias.js
 import { enviarNoticia } from "./functions_firebase.js";
 
 document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("newsForm").addEventListener("submit", function (event) {
+    document.getElementById("newsForm").addEventListener("submit", async function (event) {
         event.preventDefault();
 
         const news = {
@@ -11,11 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
             token: document.getElementById("token").value,
             bio: document.getElementById("bio").value,
             title: document.getElementById("title").value,
-            content: tinymce.get("content").getContent(), // Conteúdo formatado pelo TinyMCE
+            content: tinymce.get("content").getContent(),
             image: document.getElementById("image").value
         };
 
-        // Envia para o Firestore
-        enviarNoticia(news);
+        await enviarNoticia(news);
     });
 });

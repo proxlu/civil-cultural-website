@@ -1,26 +1,38 @@
-// functions_firebase.js
-// Lembre-se: este arquivo usa módulos ES
-import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
-import { db } from "../config/firebase-config.js"; // ajuste o caminho conforme sua estrutura
+// includes/functions_firebase.js
+import { collection, addDoc, getDocs, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+import { db } from "../config/firebase-config.js";
 
+// 🔹 Função para adicionar notícia ao Firestore
 export async function enviarNoticia(dados) {
-    // Validação simples – substitua por um sistema de autenticação robusto se necessário
     if (dados.token !== "1234") {
         alert("Acesso negado! Token inválido.");
         return;
     }
 
-    // Removemos o token para não armazená-lo no banco
-    delete dados.token;
+    delete dados.token; // Remove token antes de salvar
 
-    // Adiciona um timestamp para futura ordenação
-    dados.timestamp = serverTimestamp();
+    dados.timestamp = serverTimestamp(); // Adiciona timestamp
 
     try {
         await addDoc(collection(db, "noticias"), dados);
         alert("Notícia enviada com sucesso!");
     } catch (error) {
-        console.error("Erro ao enviar notícia: ", error);
+        console.error("Erro ao enviar notícia:", error);
         alert("Erro ao enviar notícia.");
+    }
+}
+
+// 🔹 Função para buscar todas as notícias
+export async function obterNoticias() {
+    try {
+        const querySnapshot = await getDocs(collection(db, "noticias"));
+        const noticias = [];
+        querySnapshot.forEach((doc) => {
+            noticias.push({ id: doc.id, ...doc.data() });
+        });
+        return noticias;
+    } catch (error) {
+        console.error("Erro ao obter notícias:", error);
+        return [];
     }
 }

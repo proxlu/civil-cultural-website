@@ -112,7 +112,7 @@
         <button class="discord-btn" onclick="window.open('https://discord.gg/DJXwEeZdM5', '_blank')">
             <i class="fab fa-discord"></i>
         </button>
-        <button id="write-news" onclick="window.open('writer.html', '_self')" traduzir>Escrever Notícia</button>
+        <button id="write-news" onclick="window.open('noticias/escrever/writer.html', '_self')" traduzir>Escrever Notícia</button>
     </div>
 </header>
 
@@ -125,16 +125,15 @@
 
 <!-- Scripts -->
 <script src="traduzir.js"></script>
-
-<!-- Firebase Configuração -->
-<script type="module" src="noticias/config/firebase-config.js"></script>
-
 <script src="theme_toggle.js"></script>
+
+<!-- Firebase Config -->
+<script type="module" src="noticias/config/firebase-config.js"></script>
 
 <!-- Script para carregar notícias do Firestore -->
 <script type="module">
     import { collection, query, orderBy, getDocs } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
-    import { db } from "./config/firebase-config.js"; // ajuste o caminho conforme sua estrutura
+    import { db } from "./noticias/config/firebase-config.js";
 
     async function carregarNoticias() {
         const listaNoticias = document.getElementById("newsList");

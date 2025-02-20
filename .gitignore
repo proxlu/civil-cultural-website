@@ -44,9 +44,6 @@ bower_components
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
-# Dependency directories
-node_modules/
-
 # Optional npm cache directory
 .npm
 
@@ -67,3 +64,12 @@ node_modules/
 
 # dataconnect generated files
 .dataconnect
+
+# Firebase Config
+firebase.json
+.firebaserc
+firestore.rules
+firestore.indexes.json
+
+# Node Modules
+node_modules/
