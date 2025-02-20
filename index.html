@@ -126,8 +126,10 @@
         <button onclick="handleRegister()">Registrar</button>
     </div>
 
-    <h1 traduzir>Últimas Notícias</h1>
-    <div id="newsList"></div>
+    <div class="container">
+        <h1 traduzir>Últimas Notícias</h1>
+        <div id="newsList"></div>
+    </div>
 </div>
 
 <button class="floating-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
@@ -191,7 +193,6 @@
     });
 </script>
 
-<!-- Script para carregar notícias -->
 <script type="module">
     import { collection, query, orderBy, getDocs } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
     import { db } from "./noticias/config/firebase-config.js";
@@ -201,14 +202,16 @@
         const q = query(collection(db, "noticias"), orderBy("timestamp", "desc"));
         try {
             const querySnapshot = await getDocs(q);
+            listaNoticias.innerHTML = ""; // Limpa antes de carregar
+
             querySnapshot.forEach((doc) => {
                 const noticia = doc.data();
                 listaNoticias.innerHTML += `
                     <div class="news">
-                        <h2>${noticia.title}</h2>
-                        <p><strong>Autor:</strong> ${noticia.name}</p>
-                        <p>${noticia.bio}</p>
-                        <div>${noticia.content}</div>
+                        <h2 traduzir>${noticia.title}</h2>
+                        <p traduzir><strong traduzir>Autor:</strong> ${noticia.name}</p>
+                        <p traduzir>${noticia.summary}</p>
+                        <button onclick="verNoticia('${doc.id}')" traduzir>Ver Notícia</button>
                     </div>
                 `;
             });
@@ -216,6 +219,11 @@
             console.error("Erro ao carregar notícias:", error);
         }
     }
+
+    window.verNoticia = (id) => {
+        window.location.href = `noticias/ver.html?id=${id}`;
+    };
+
     carregarNoticias();
 </script>
 

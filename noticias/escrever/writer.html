@@ -68,7 +68,9 @@
         <button class="discord-btn" onclick="window.open('https://discord.gg/DJXwEeZdM5', '_blank')">
             <i class="fab fa-discord"></i>
         </button>
-        <button id="write-news" onclick="window.open('writer.html', '_self')" traduzir>Ver Notícia</button>
+        <div class="header-buttons">
+            <button onclick="window.location.href='../../index.html'" traduzir>Ver Notícias</button>
+        </div>
     </div>
 </header>
 
@@ -92,7 +94,7 @@
             </div>
 
             <div class="floating-label">
-                <input type="text" id="title" name="title" placeholder=" " required>
+                <textarea id="summary" placeholder="Resumo da Notícia (Máximo 200 caracteres)" maxlength="200" required></textarea>
                 <label for="title" traduzir>Título da Notícia</label>
             </div>
 
@@ -123,7 +125,15 @@
         language: 'pt_BR',
         plugins: 'advlist autolink lists link image charmap preview anchor searchreplace visualblocks code fullscreen insertdatetime media table code help wordcount',
         toolbar: 'undo redo | formatselect | bold italic underline strikethrough | forecolor backcolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | removeformat | code',
-        height: 300
+        height: 300,
+        menubar: false
+    });
+
+    document.getElementById("newsForm").addEventListener("submit", function(event) {
+        setTimeout(() => {
+            document.getElementById("newsForm").reset(); // 🔥 Limpa os campos após enviar a notícia
+            tinymce.get("content").setContent(""); // 🔥 Limpa o TinyMCE
+        }, 1000);
     });
 </script>
 </body>

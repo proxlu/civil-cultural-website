@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Notícia</title>
+    <link rel="stylesheet" href="../css/style_write.css">
+</head>
+<body>
+<header>
+    <div class="logo" traduzir>Logo</div>
+    <div class="header-buttons">
+        <button onclick="window.location.href='../../index.html'" traduzir>Voltar</button>
+    </div>
+</header>
+
+<div class="container">
+    <div id="noticiaCompleta"></div>
+</div>
+
+<script type="module">
+    import { doc, getDoc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+    import { db } from "../config/firebase-config.js";
+
+    async function carregarNoticia() {
+        const params = new URLSearchParams(window.location.search);
+        const noticiaId = params.get("id");
+        if (!noticiaId) {
+            document.getElementById("noticiaCompleta").innerHTML = "<p traduzir>Notícia não encontrada.</p>";
+            return;
+        }
+
+        const docRef = doc(db, "noticias", noticiaId);
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+            const noticia = docSnap.data();
+            document.getElementById("noticiaCompleta").innerHTML = `
+                <h1 traduzir>${noticia.title}</h1>
+                <p traduzir><strong traduzir>Autor:</strong> ${noticia.name}</p>
+                <p traduzir>${noticia.content}</p>
+                ${noticia.image ? `<img src="${noticia.image}" width="100%">` : ""}
+            `;
+        } else {
+            document.getElementById("noticiaCompleta").innerHTML = "<p traduzir>Notícia não encontrada.</p>";
+        }
+    }
+
+    carregarNoticia();
+</script>
+</body>
+</html>

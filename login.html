@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title traduzir>Login</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header>
+    <div class="logo" traduzir>Logo</div>
+    <div class="header-buttons">
+        <button id="language-toggle">PT/EN</button>
+    </div>
+</header>
+
+<div class="container">
+    <div class="form-container">
+        <h2 traduzir>Login</h2>
+        <input type="email" id="email" placeholder="Email" traduzir required>
+        <input type="password" id="password" placeholder="Senha" traduzir required>
+        <button onclick="handleLogin()" traduzir>Entrar</button>
+        <p traduzir>Não tem uma conta? <a href="register.html">Registre-se</a></p>
+    </div>
+</div>
+
+<script src="traduzir.js"></script>
+<script type="module">
+    import { auth } from "../config/firebase-config.js";
+    import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+
+    window.handleLogin = async () => {
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("password").value;
+        try {
+            await signInWithEmailAndPassword(auth, email, senha);
+            alert("Login bem-sucedido!");
+            window.location.href = "../index.html";
+        } catch (error) {
+            console.error("Erro no login:", error.message);
+            alert("Erro no login: " + error.message);
+        }
+    };
+</script>
+</body>
+</html>
