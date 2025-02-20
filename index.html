@@ -112,11 +112,20 @@
         <button class="discord-btn" onclick="window.open('https://discord.gg/DJXwEeZdM5', '_blank')">
             <i class="fab fa-discord"></i>
         </button>
-        <button id="write-news" onclick="window.open('noticias/escrever/writer.html', '_self')" traduzir>Escrever Notícia</button>
+        <button id="write-news" onclick="window.open('noticias/escrever/writer.html', '_self')" style="display:none;">Escrever Notícia</button>
+        <button id="logoutBtn" style="display:none;" onclick="handleLogout()">Sair</button>
     </div>
 </header>
 
 <div class="container">
+    <h2>Login</h2>
+    <div id="loginForm">
+        <input type="email" id="email" placeholder="Email">
+        <input type="password" id="password" placeholder="Senha">
+        <button onclick="handleLogin()">Entrar</button>
+        <button onclick="handleRegister()">Registrar</button>
+    </div>
+
     <h1 traduzir>Últimas Notícias</h1>
     <div id="newsList"></div>
 </div>
@@ -130,7 +139,59 @@
 <!-- Firebase Config -->
 <script type="module" src="noticias/config/firebase-config.js"></script>
 
-<!-- Script para carregar notícias do Firestore -->
+<!-- Script para autenticação -->
+<script type="module">
+    import { auth } from "./noticias/config/firebase-config.js";
+    import { signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js";
+
+    const adminEmail = "civilculturalteam@gmail.com";
+
+    window.handleLogin = async () => {
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("password").value;
+        try {
+            const userCredential = await signInWithEmailAndPassword(auth, email, senha);
+            console.log("Usuário logado:", userCredential.user);
+            verificarAdmin(userCredential.user);
+        } catch (error) {
+            console.error("Erro no login:", error.message);
+            alert("Erro no login: " + error.message);
+        }
+    };
+
+    window.handleRegister = async () => {
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("password").value;
+        try {
+            await createUserWithEmailAndPassword(auth, email, senha);
+            alert("Conta criada com sucesso!");
+        } catch (error) {
+            console.error("Erro ao registrar:", error.message);
+            alert("Erro ao registrar: " + error.message);
+        }
+    };
+
+    window.handleLogout = async () => {
+        await signOut(auth);
+        window.location.reload();
+    };
+
+    function verificarAdmin(user) {
+        if (user.email === adminEmail) {
+            document.getElementById("write-news").style.display = "block"; // Exibe botão Escrever Notícia
+        }
+        document.getElementById("logoutBtn").style.display = "block";
+        document.getElementById("loginForm").style.display = "none";
+    }
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            verificarAdmin(user);
+        }
+    });
+</script>
+
+<!-- Script para carregar notícias -->
 <script type="module">
     import { collection, query, orderBy, getDocs } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
     import { db } from "./noticias/config/firebase-config.js";
@@ -142,15 +203,14 @@
             const querySnapshot = await getDocs(q);
             querySnapshot.forEach((doc) => {
                 const noticia = doc.data();
-                const div = document.createElement("div");
-                div.classList.add("news");
-                div.innerHTML = `
-            <h2 traduzir>${noticia.title}</h2>
-            <p><strong traduzir>Autor:</strong> ${noticia.name}</p>
-            <p traduzir>${noticia.bio}</p>
-            <div traduzir>${noticia.content}</div>
-          `;
-                listaNoticias.appendChild(div);
+                listaNoticias.innerHTML += `
+                    <div class="news">
+                        <h2>${noticia.title}</h2>
+                        <p><strong>Autor:</strong> ${noticia.name}</p>
+                        <p>${noticia.bio}</p>
+                        <div>${noticia.content}</div>
+                    </div>
+                `;
             });
         } catch (error) {
             console.error("Erro ao carregar notícias:", error);
@@ -158,5 +218,6 @@
     }
     carregarNoticias();
 </script>
+
 </body>
 </html>

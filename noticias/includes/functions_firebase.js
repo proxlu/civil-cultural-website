@@ -36,3 +36,26 @@ export async function obterNoticias() {
         return [];
     }
 }
+
+export async function carregarNoticias() {
+    try {
+        const querySnapshot = await getDocs(collection(db, "noticias"));
+        const noticiasContainer = document.getElementById("noticiasContainer");
+        noticiasContainer.innerHTML = ""; // Limpa antes de exibir
+
+        querySnapshot.forEach((doc) => {
+            const noticia = doc.data();
+            noticiasContainer.innerHTML += `
+                <div class="noticia">
+                    <h3>${noticia.title}</h3>
+                    <p><strong>${noticia.name}</strong></p>
+                    <p>${noticia.bio}</p>
+                    <p>${noticia.content}</p>
+                    ${noticia.image ? `<img src="${noticia.image}" width="100%">` : ""}
+                </div>
+            `;
+        });
+    } catch (error) {
+        console.error("Erro ao carregar notícias:", error);
+    }
+}
