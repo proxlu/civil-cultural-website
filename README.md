@@ -17,8 +17,6 @@
 
 ---
 
-## 🇺🇸 ENGLISH VERSION
-
 <div align="center">
 
 ![Warning](https://img.shields.io/badge/🚨-IMPORTANT_WARNING-critical)
@@ -35,6 +33,8 @@
 > - 📍 Development moved to new repository
 > - 🤖 Discontinued here - continued with AI
 > - ⏰ Maintainers without time availability
+
+---
 
 [![image](https://github.com/user-attachments/assets/f3132d9e-4f24-419f-867f-955c377cba45)](http://civilcultural.free.nf)
 
