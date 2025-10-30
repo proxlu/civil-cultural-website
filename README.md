@@ -1,3 +1,41 @@
+<div align="center">
+
+![Aviso](https://img.shields.io/badge/🚨-AVISO_IMPORTANTE-critical)
+![Status](https://img.shields.io/badge/STATUS-MIGRADO-blue)
+
+</div>
+
+> ⚠️ **AVISO IMPORTANTE**
+> 
+> Devido à falta de tempo dos mantenedores e colaboradores, este projeto está sendo continuado com assistência de IA em um novo repositório.
+> 
+> **🔗 Repositório Ativo:** [https://github.com/proxlu/civilcultural](https://github.com/proxlu/civilcultural)
+> 
+> - 📍 Desenvolvimento movido para novo repositório
+> - 🤖 Descontinuado aqui - continuado com IA
+> - ⏰ Mantenedores sem disponibilidade de tempo
+
+---
+
+## 🇺🇸 ENGLISH VERSION
+
+<div align="center">
+
+![Warning](https://img.shields.io/badge/🚨-IMPORTANT_WARNING-critical)
+![Status](https://img.shields.io/badge/STATUS-MIGRATED-blue)
+
+</div>
+
+> ⚠️ **IMPORTANT NOTICE**
+> 
+> Due to lack of time from maintainers and collaborators, this project is being continued with AI assistance in a new repository.
+> 
+> **🔗 Active Repository:** [https://github.com/proxlu/civilcultural](https://github.com/proxlu/civilcultural)
+> 
+> - 📍 Development moved to new repository
+> - 🤖 Discontinued here - continued with AI
+> - ⏰ Maintainers without time availability
+
 [![image](https://github.com/user-attachments/assets/f3132d9e-4f24-419f-867f-955c377cba45)](http://civilcultural.free.nf)
 
 # civil-cultural-website
